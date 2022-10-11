@@ -1,0 +1,7 @@
+/vendor/bin/hw/mypackage\.mysubpackage\.foo@1\.0-service u:object_r:hal_mysubpackage_default_exec:s0
+
+
+
+
+/vendor/bin/hw/mypackage\.mysubpackage\.fooAIDL-service u:object_r:hal_fooAIDL_default_exec:s0
+

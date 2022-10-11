@@ -1,0 +1,6 @@
+package mypackage.mysubpackage.foo@1.0;
+
+interface ITest {
+    getTest() generates (string res);
+    setTest(string param) generates (bool res);
+};

@@ -1,0 +1,17 @@
+cc_binary {
+    name: "foo_AIDL_tester",
+    vendor: true,
+    relative_install_path: "hw",
+
+    srcs: ["HalTest.cpp"],
+    
+    shared_libs: [
+        "libbase",
+        "liblog",
+        "libhardware",
+        "libbinder_ndk",
+        "libbinder",
+        "libutils",
+        "mypackage.mysubpackage.fooAIDL-V1-ndk_platform"
+    ],
+}

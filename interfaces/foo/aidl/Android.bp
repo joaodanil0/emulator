@@ -1,0 +1,16 @@
+aidl_interface {
+    name: "mypackage.mysubpackage.fooAIDL",
+    vendor: true,
+    srcs: ["mypackage/mysubpackage/fooAIDL/*.aidl"],
+    stability: "vintf",
+    owner: "CASA",
+    backend: {
+        cpp: {
+            enabled: true,
+        },
+        java: {
+            sdk_version: "module_current",
+        },
+    },
+}
+

@@ -1,0 +1,11 @@
+// Signature format: 2.0
+package com.fooJniJava {
+
+  public class FooJniJava {
+    ctor public FooJniJava();
+    method public String getTest();
+    method public boolean setTest(String);
+  }
+
+}
+

@@ -1,0 +1,17 @@
+cc_binary {
+    relative_install_path: "hw",
+    name: "mypackage.mysubpackage.foo@1.0-service",
+    init_rc: ["mypackage.mysubpackage.foo@1.0-service.rc"],
+    srcs: ["service.cpp", "Test.cpp"],
+    vendor: true,
+    // system_ext_specific: true,
+    vintf_fragments: ["mypackage.mysubpackage.foo@1.0-service.xml"],
+
+    shared_libs: [
+        "libhidlbase",
+        "liblog",
+        "libutils",
+        "libhardware",
+        "mypackage.mysubpackage.foo@1.0",
+    ],
+}

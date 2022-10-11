@@ -1,0 +1,7 @@
+<manifest version="1.0" type="device">
+    <hal format="aidl">
+        <name>mypackage.mysubpackage.fooAIDL</name>
+        <version>1</version>
+        <fqname>ITest/default</fqname>
+    </hal>
+</manifest>

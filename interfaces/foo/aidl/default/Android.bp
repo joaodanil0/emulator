@@ -1,0 +1,27 @@
+cc_binary {
+    name: "mypackage.mysubpackage.fooAIDL-service",
+    vendor: true,
+    relative_install_path: "hw",
+    init_rc: ["mypackage.mysubpackage.fooAIDL-service.rc"],
+    vintf_fragments: ["mypackage.mysubpackage.fooAIDL-service.xml"],
+
+    srcs: [
+        "service.cpp",
+        "Test.cpp"
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+
+    shared_libs: [
+        "libbase",
+        "liblog",
+        "libhardware",
+        "libbinder_ndk",
+        "libbinder",
+        "libutils",
+        "mypackage.mysubpackage.fooAIDL-V1-ndk_platform",
+    ],
+}

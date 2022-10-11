@@ -1,0 +1,9 @@
+service mypackage.mysubpackage.fooAIDL-service /vendor/bin/hw/mypackage.mysubpackage.fooAIDL-service
+        interface aidl mypackage.mysubpackage.fooAIDL-service.ITest/default
+        class hal
+        user system
+        group system
+        
+on boot
+        chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
+        chmod 0660 /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor

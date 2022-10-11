@@ -1,0 +1,17 @@
+cc_binary {
+    relative_install_path: "hw",
+    defaults: ["hidl_defaults"],
+    name: "subpackage_foo_tester",
+    srcs: ["HalTest.cpp"],
+    vendor: true,
+
+    shared_libs: [
+        "libm",
+        "liblog",
+        "libhardware",
+        "libhidlbase",
+        "libutils",
+        "mypackage.mysubpackage.foo@1.0",
+    ],
+
+}

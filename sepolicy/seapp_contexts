@@ -1,0 +1,3 @@
+user=_app seinfo=platform name=com.fooHidl      domain=FooJniServices   type=app_data_file levelFrom=all
+user=_app seinfo=platform name=com.fooHidlJava  domain=FooJavaServices  type=app_data_file levelFrom=all
+user=_app seinfo=platform name=com.fooAidlJava  domain=FooAidlServices  type=app_data_file levelFrom=all

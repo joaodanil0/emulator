@@ -1,0 +1,19 @@
+# foohidlservices app
+type FooAidlServices, domain;
+app_domain(FooAidlServices)
+# # gpu_access(foohidlservices)
+
+allow FooAidlServices hal_mysubpackage_hwservice:hwservice_manager find;
+allow FooAidlServices hal_mysubpackage_default:binder call;
+
+# Use system services exposed as part of Android framework public API
+allow FooAidlServices app_api_service:service_manager find;
+
+# Read and write /data/data subdirectory (for its app-private persistent data).
+allow FooAidlServices app_data_file:dir create_dir_perms;
+allow FooAidlServices app_data_file:{ file lnk_file } create_file_perms;
+
+allow FooAidlServices fooAIDL_service:service_manager find;
+allow FooAidlServices hal_fooAIDL_default:binder call;
+
+

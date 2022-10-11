@@ -1,0 +1,16 @@
+type hal_mysubpackage_default, domain;
+type hal_mysubpackage_default_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hal_mysubpackage_default);
+
+# allow hal_mysubpackage_default hwservicemanager_prop:file read;
+get_prop(hal_mysubpackage_default, hwservicemanager_prop); 
+
+# allow hal_mysubpackage_default hwservicemanager:binder call;
+hwbinder_use(hal_mysubpackage_default);
+
+# allow hal_mysubpackage_default default_android_hwservice:hwservice_manager find;
+add_hwservice(hal_mysubpackage_default, hal_mysubpackage_hwservice);
+
+# allow hal_mysubpackage_default sysfs_devices_system_cpu:file write;
+allow hal_mysubpackage_default sysfs_devices_system_cpu:file write;

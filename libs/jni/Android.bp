@@ -1,0 +1,36 @@
+cc_library_shared {
+    name: "libfooJNI",
+    vendor: true,
+
+    defaults: ["libfooJNI-libs"],
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wno-unused-parameter",
+    ],
+
+    srcs: [
+        // "foo_jni.cpp",
+        "onload.cpp",
+        "FooJNI.cpp"
+    ],
+}
+
+cc_defaults {
+    name: "libfooJNI-libs",
+
+    shared_libs: [
+        "libbase",
+        "libcutils",
+        "liblog",
+        "libhardware",
+        "libhidlbase",
+        "libutils",
+        "mypackage.mysubpackage.foo@1.0"
+    ],
+
+    header_libs: [
+        "jni_headers",
+    ],
+}

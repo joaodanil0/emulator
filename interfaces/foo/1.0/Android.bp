@@ -1,0 +1,12 @@
+hidl_interface {
+    name: "mypackage.mysubpackage.foo@1.0",
+    root: "mypackage.mysubpackage",
+    srcs: [
+        "ITest.hal",
+    ],
+    interfaces: [
+        "android.hidl.base@1.0",
+    ],
+    gen_java: true,
+    product_specific: true,
+}

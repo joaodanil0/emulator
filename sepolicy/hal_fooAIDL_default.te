@@ -1,0 +1,9 @@
+type hal_fooAIDL_default, domain;
+type hal_fooAIDL_default_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hal_fooAIDL_default);
+vndbinder_use(hal_fooAIDL_default);
+add_service(hal_fooAIDL_default, fooAIDL_service);
+allow hal_fooAIDL_default servicemanager:binder { call transfer };
+allow hal_fooAIDL_default sysfs_devices_system_cpu:file write;
+
